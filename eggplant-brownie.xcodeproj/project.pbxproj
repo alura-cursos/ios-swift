@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7900BDF21A18E479006A7125 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7900BDF11A18E479006A7125 /* Meal.swift */; };
+		7900BDF41A18E48B006A7125 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7900BDF31A18E48B006A7125 /* Item.swift */; };
 		798F28E81A184AE3009016B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798F28E71A184AE3009016B1 /* AppDelegate.swift */; };
 		798F28EA1A184AE3009016B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798F28E91A184AE3009016B1 /* ViewController.swift */; };
 		798F28ED1A184AE3009016B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798F28EB1A184AE3009016B1 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		7900BDED1A18E13D006A7125 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		7900BDF11A18E479006A7125 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		7900BDF31A18E48B006A7125 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		798F28E21A184AE3009016B1 /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		798F28E61A184AE3009016B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		798F28E71A184AE3009016B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7900BDEE1A18E457006A7125 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				7900BDF11A18E479006A7125 /* Meal.swift */,
+				7900BDF31A18E48B006A7125 /* Item.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		7900BDEF1A18E46A006A7125 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		7900BDF01A18E46A006A7125 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		798F28D91A184AE3009016B1 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +105,9 @@
 		798F28E41A184AE3009016B1 /* eggplant-brownie */ = {
 			isa = PBXGroup;
 			children = (
+				7900BDEF1A18E46A006A7125 /* viewcontrollers */,
+				7900BDF01A18E46A006A7125 /* views */,
+				7900BDEE1A18E457006A7125 /* models */,
 				798F28E71A184AE3009016B1 /* AppDelegate.swift */,
 				798F28E91A184AE3009016B1 /* ViewController.swift */,
 				798F28EB1A184AE3009016B1 /* Main.storyboard */,
@@ -214,7 +244,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7900BDF41A18E48B006A7125 /* Item.swift in Sources */,
 				798F28EA1A184AE3009016B1 /* ViewController.swift in Sources */,
+				7900BDF21A18E479006A7125 /* Meal.swift in Sources */,
 				798F28E81A184AE3009016B1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

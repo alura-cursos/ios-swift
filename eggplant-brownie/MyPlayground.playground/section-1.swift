@@ -1,34 +1,28 @@
 import UIKit
 
-func helloCalories() {
-    println("hello calories!")
+class Meal {
+    var name: String?
+    var happiness: Int?
 }
 
-helloCalories()
-println("oi tudo bem")
-helloCalories()
+let brownie = Meal()
+brownie.name = "Eggplant brownie"
+brownie.happiness = 3
 
-let calories = [ 50.5, 100, 300, 500]
-for i in 0...(calories.count - 1) {
-    println(calories[i])
+println(brownie.name)
+println(brownie.happiness)
+
+let happiness = "5"
+println(happiness.toInt())
+
+var name:String!
+name = "Eggplant Brownie"
+println(countElements(name)) // 7
+
+
+var name2:String?
+if let n = name2 {
+    println(countElements(n)) // 7
+} else {
+    println("empty")
 }
-
-
-func allCalories(calories: Array<Double>) -> Double {
-    var total:Double = 0
-    for c in calories {
-        total += c
-    }
-    return total
-}
-
-let totalCalories = allCalories([ 10.5, 100, 300, 500])
-println(totalCalories)
-
-var values = [ 1, 2]
-
-var total = 0
-for v in values {
-    total += v
-}
-println(total / values.count) // 1? 1.5?

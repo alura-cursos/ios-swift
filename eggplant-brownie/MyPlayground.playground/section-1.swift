@@ -1,28 +1,34 @@
 import UIKit
 
+class Item {
+    var name:String
+    var calories:Double
+    init(name: String, calories: Double) {
+        self.name = name
+        self.calories = calories
+    }
+}
+
 class Meal {
-    var name: String?
-    var happiness: Int?
+    var name:String
+    var happiness:Int
+    var items = Array<Item>()
+    init(name: String, happiness: Int) {
+        self.name = name
+        self.happiness = happiness
+    }
+    
+    func allCalories() -> Double {
+        var total = 0.0
+        for i in items {
+            total += i.calories
+        }
+        return total
+    }
 }
 
-let brownie = Meal()
-brownie.name = "Eggplant brownie"
-brownie.happiness = 3
+let brownie = Meal(name: "Eggplant brownie", happiness: 5)
+brownie.items.append(Item(name: "brownie", calories: 115))
+brownie.items.append(Item(name: "vegan cream", calories: 40))
 
-println(brownie.name)
-println(brownie.happiness)
-
-let happiness = "5"
-println(happiness.toInt())
-
-var name:String!
-name = "Eggplant Brownie"
-println(countElements(name)) // 7
-
-
-var name2:String?
-if let n = name2 {
-    println(countElements(n)) // 7
-} else {
-    println("empty")
-}
+println(brownie.allCalories())

@@ -10,7 +10,7 @@ class ViewController: UIViewController {
     
     @IBAction func add() {
         let name = nameField.text
-        let happiness = "5"
+        let happiness = happinessField.text
         println("eaten: \(name) \(happiness)!")
     }
 

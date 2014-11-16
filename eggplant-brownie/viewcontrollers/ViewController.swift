@@ -9,11 +9,19 @@ class ViewController: UIViewController {
     @IBOutlet var happinessField: UITextField!
     
     @IBAction func add() {
-        let name = nameField.text
-        let happiness = happinessField.text
-        println("eaten: \(name) \(happiness)!")
-    }
+        if nameField == nil || happinessField == nil {
+            return
+        }
 
+        let name = nameField!.text
+        let happiness = happinessField!.text.toInt()
+        if happiness == nil {
+            return
+        }
+
+        let meal = Meal(name: name, happiness: happiness!)
+        println("eaten: \(meal.name) \(meal.happiness)")
+    }
 
 }
 

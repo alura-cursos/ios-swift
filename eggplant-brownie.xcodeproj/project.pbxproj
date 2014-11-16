@@ -26,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7900BDED1A18E13D006A7125 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		798F28E21A184AE3009016B1 /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		798F28E61A184AE3009016B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		798F28E71A184AE3009016B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 				798F28E71A184AE3009016B1 /* AppDelegate.swift */,
 				798F28E91A184AE3009016B1 /* ViewController.swift */,
 				798F28EB1A184AE3009016B1 /* Main.storyboard */,
+				7900BDED1A18E13D006A7125 /* MyPlayground.playground */,
 				798F28EE1A184AE3009016B1 /* Images.xcassets */,
 				798F28F01A184AE3009016B1 /* LaunchScreen.xib */,
 				798F28E51A184AE3009016B1 /* Supporting Files */,
@@ -405,6 +407,7 @@
 				798F29031A184AE3009016B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		798F29041A184AE3009016B1 /* Build configuration list for PBXNativeTarget "eggplant-brownieTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +416,7 @@
 				798F29061A184AE3009016B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

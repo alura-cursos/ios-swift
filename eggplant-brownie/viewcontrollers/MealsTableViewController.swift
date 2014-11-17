@@ -14,6 +14,7 @@ class MealsTableViewController: UITableViewController {
 
     func add(meal: Meal) {
         meals.append(meal)
+        tableView.reloadData()
     }
 
     override func tableView(tableView: UITableView,
@@ -31,4 +32,12 @@ class MealsTableViewController: UITableViewController {
             cell.textLabel.text = meal.name
             return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            if(segue.identifier == "addMeal") {
+                let view = segue.destinationViewController as ViewController
+                view.delegate = self
+            }
+    }
+
 }

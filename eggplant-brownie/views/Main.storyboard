@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="1252" y="315"/>
         </scene>
-        <!--Meals Table Table View Controller-->
+        <!--Meals Table View Controller-->
         <scene sceneID="QTI-k0-3d7">
             <objects>
-                <tableViewController id="bqD-AI-zht" customClass="MealsTableTableViewController" customModule="eggplant_brownie" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bqD-AI-zht" customClass="MealsTableViewController" customModule="eggplant_brownie" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="aIO-7Q-tJd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

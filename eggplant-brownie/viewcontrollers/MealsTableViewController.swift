@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MealsTableTableViewController: UITableViewController {
+class MealsTableViewController: UITableViewController {
 
     var meals = [ Meal(name: "Eggplant brownie", happiness: 5),
         Meal(name: "Zucchini Muffin", happiness: 3)]

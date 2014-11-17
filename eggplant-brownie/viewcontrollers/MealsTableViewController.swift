@@ -12,6 +12,10 @@ class MealsTableViewController: UITableViewController {
     var meals = [ Meal(name: "Eggplant brownie", happiness: 5),
         Meal(name: "Zucchini Muffin", happiness: 3)]
 
+    func add(meal: Meal) {
+        meals.append(meal)
+    }
+
     override func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
             return meals.count

@@ -7,6 +7,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var nameField: UITextField!
     @IBOutlet var happinessField: UITextField!
+    var delegate:MealsTableViewController?
     
     @IBAction func add() {
         if nameField == nil || happinessField == nil {
@@ -22,6 +23,12 @@ class ViewController: UIViewController {
         let meal = Meal(name: name, happiness: happiness!)
         println("eaten: \(meal.name) \(meal.happiness)")
 
+        if delegate == nil {
+            return
+        }
+        
+        delegate!.add(meal)
+        
         if let navigation = self.navigationController {
             navigation.popViewControllerAnimated(true)
         }

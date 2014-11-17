@@ -3,11 +3,14 @@
 
 import UIKit
 
+protocol AddAMealDelegate {
+    func add(meal: Meal)
+}
 class ViewController: UIViewController {
     
     @IBOutlet var nameField: UITextField!
     @IBOutlet var happinessField: UITextField!
-    var delegate:MealsTableViewController?
+    var delegate:AddAMealDelegate?
     
     @IBAction func add() {
         if nameField == nil || happinessField == nil {

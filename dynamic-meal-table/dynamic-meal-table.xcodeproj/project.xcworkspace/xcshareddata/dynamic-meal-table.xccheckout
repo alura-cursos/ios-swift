@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>26C5E84D-A047-47CC-9D73-919C922CE31F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>dynamic-meal-table</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D5007267ED12B16864D8A337B7CE5D1AE384232C</key>
+		<string>github.com:alura-cursos/ios-swift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>dynamic-meal-table/dynamic-meal-table.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D5007267ED12B16864D8A337B7CE5D1AE384232C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:alura-cursos/ios-swift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D5007267ED12B16864D8A337B7CE5D1AE384232C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D5007267ED12B16864D8A337B7CE5D1AE384232C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>eggplant-brownie</string>
+		</dict>
+	</array>
+</dict>
+</plist>

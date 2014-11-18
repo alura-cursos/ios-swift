@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var nameField: UITextField!
     @IBOutlet var happinessField: UITextField!
     var delegate:AddAMealDelegate?
+    var selected = Array<Item>()
 
     func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
@@ -38,11 +39,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(tableView: UITableView,
         didSelectRowAtIndexPath indexPath: NSIndexPath) {
-            let cell = tableView.cellForRowAtIndexPath(indexPath)
-            if cell == nil {
-                return
-            }
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        if cell == nil {
+            return
+        }
+        if (cell!.accessoryType == UITableViewCellAccessoryType.None) {
             cell!.accessoryType = UITableViewCellAccessoryType.Checkmark
+            selected.append(items[indexPath.row])
+        } else {
+            cell!.accessoryType = UITableViewCellAccessoryType.None
+            if let position = find(selected, items[indexPath.row]) {
+                selected.removeAtIndex(position)
+            }
+        }
     }
 
     @IBAction func add() {
@@ -57,7 +66,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
 
         let meal = Meal(name: name, happiness: happiness!)
-        println("eaten: \(meal.name) \(meal.happiness)")
+        meal.items = selected
+        println("eaten: \(meal.name) \(meal.happiness) \(meal.items)")
 
         if delegate == nil {
             return

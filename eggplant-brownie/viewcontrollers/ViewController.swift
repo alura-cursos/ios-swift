@@ -6,7 +6,7 @@ import UIKit
 protocol AddAMealDelegate {
     func add(meal: Meal)
 }
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var items = [ Item(name: "Eggplant Brownie", calories: 10),
         Item(name: "Zucchini Muffin", calories: 10),
@@ -34,6 +34,15 @@ class ViewController: UIViewController, UITableViewDataSource {
                 UITableViewCellStyle.Default,reuseIdentifier: nil)
             cell.textLabel.text = item.name
             return cell
+    }
+
+    func tableView(tableView: UITableView,
+        didSelectRowAtIndexPath indexPath: NSIndexPath) {
+            let cell = tableView.cellForRowAtIndexPath(indexPath)
+            if cell == nil {
+                return
+            }
+            cell!.accessoryType = UITableViewCellAccessoryType.Checkmark
     }
 
     @IBAction func add() {

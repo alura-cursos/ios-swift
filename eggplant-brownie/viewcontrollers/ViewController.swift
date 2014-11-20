@@ -63,7 +63,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @IBAction func showNewItem() {
-        println("new item")
+        let newItem = NewItemViewController(nibName: "NewItemViewController", bundle: nil)
+        if let navigation = navigationController {
+            navigation.pushViewController(newItem, animated: true)
+        }
     }
 
 

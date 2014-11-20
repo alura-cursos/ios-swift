@@ -53,6 +53,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
     }
+    
+    override func viewDidLoad() {
+        let newItemButton = UIBarButtonItem(title: "new item",
+            style: UIBarButtonItemStyle.Plain,
+            target: self,
+            action: Selector("showNewItem"))
+        navigationItem.rightBarButtonItem = newItemButton
+    }
+    
+    @IBAction func showNewItem() {
+        println("new item")
+    }
+
 
     @IBAction func add() {
         if nameField == nil || happinessField == nil {

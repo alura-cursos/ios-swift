@@ -48,6 +48,10 @@ class MealsTableViewController: UITableViewController, AddAMealDelegate {
             let details = UIAlertController(title: meal.name,
                 message: "Happiness: \(meal.happiness)",
                 preferredStyle: UIAlertControllerStyle.Alert)
+            let ok = UIAlertAction(title: "Ok",
+                style: UIAlertActionStyle.Cancel,
+                handler: nil)
+            details.addAction(ok)
             presentViewController(details, animated: true, completion: nil)
         }
     }

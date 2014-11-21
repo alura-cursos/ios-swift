@@ -28,14 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if let table = tableView {
             table.reloadData()
         } else {
-            let alert = UIAlertController(title: "Sorry",
-                message: "Unexpected error, but the item was added.",
-                preferredStyle: UIAlertControllerStyle.Alert)
-            let ok = UIAlertAction(title: "Understood",
-                style: UIAlertActionStyle.Cancel,
-                handler: nil)
-            alert.addAction(ok)
-            presentViewController(alert, animated: true, completion: nil)
+            Alert(controller: self).show("Unexpected error, but the item was added.")
         }
     }
     

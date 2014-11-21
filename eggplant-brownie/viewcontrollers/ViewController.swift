@@ -6,7 +6,7 @@ import UIKit
 protocol AddAMealDelegate {
     func add(meal: Meal)
 }
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddAnItemDelegate {
     
     var items = [ Item(name: "Eggplant Brownie", calories: 10),
         Item(name: "Zucchini Muffin", calories: 10),
@@ -21,6 +21,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var delegate:AddAMealDelegate?
     var selected = Array<Item>()
 
+    @IBOutlet var tableView: UITableView?
+    
+    func addNew(item: Item) {
+        items.append(item)
+        if tableView == nil {
+            return
+        }
+        tableView!.reloadData()
+    }
+    
     func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
             return items.count
@@ -63,7 +73,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @IBAction func showNewItem() {
-        let newItem = NewItemViewController(nibName: "NewItemViewController", bundle: nil)
+        let newItem = NewItemViewController(delegate: self)
         if let navigation = navigationController {
             navigation.pushViewController(newItem, animated: true)
         }

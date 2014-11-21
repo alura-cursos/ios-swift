@@ -7,7 +7,19 @@
 
 import UIKit
 
+protocol AddAnItemDelegate {
+    func addNew(item:Item)
+}
 class NewItemViewController: UIViewController {
+    let delegate:AddAnItemDelegate?
+    init(delegate:AddAnItemDelegate) {
+        self.delegate = delegate
+        super.init(nibName: "NewItemViewController", bundle: nil)
+    }
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     @IBOutlet var nameField:UITextField?
     @IBOutlet var caloriesField:UITextField?
     
@@ -19,6 +31,12 @@ class NewItemViewController: UIViewController {
         let calories = NSString(string: caloriesField!.text).doubleValue
         
         let item = Item(name: name, calories: calories)
+        
+        if delegate == nil {
+            return
+        }
+        delegate!.addNew(item)
+        
         if let navigation = navigationController {
             navigation.popViewControllerAnimated(true)
         }

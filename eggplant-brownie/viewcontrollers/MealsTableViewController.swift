@@ -30,14 +30,30 @@ class MealsTableViewController: UITableViewController, AddAMealDelegate {
             var cell = UITableViewCell(style: UITableViewCellStyle.Default,
                 reuseIdentifier: nil)
             cell.textLabel.text = meal.name
+            let longPress = UILongPressGestureRecognizer(target: self, action: Selector("showDetails:"))
+            cell.addGestureRecognizer(longPress)
             return cell
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            if(segue.identifier == "addMeal") {
-                let view = segue.destinationViewController as ViewController
-                view.delegate = self
+    func showDetails(recognizer: UILongPressGestureRecognizer){
+        if recognizer.state == UIGestureRecognizerState.Began {
+            let cell = recognizer.view as UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)
+            if indexPath == nil {
+                return
             }
+            let row = indexPath!.row
+            let meal = meals[ row ]
+
+            println("meal: \(meal.name) \(meal.happiness)")
+        }
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "addMeal") {
+            let view = segue.destinationViewController as ViewController
+            view.delegate = self
+        }
     }
 
 }

@@ -82,30 +82,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 
-
-    @IBAction func add() {
+    func getMealFromForm() -> Meal? {
         if nameField == nil || happinessField == nil {
-            return
+            return nil
         }
-
+        
         let name = nameField!.text
         let happiness = happinessField!.text.toInt()
         if happiness == nil {
-            return
+            return nil
         }
-
+        
         let meal = Meal(name: name, happiness: happiness!)
         meal.items = selected
         println("eaten: \(meal.name) \(meal.happiness) \(meal.items)")
+        return meal
+    }
 
-        if delegate == nil {
-            return
-        }
-        
-        delegate!.add(meal)
-        
-        if let navigation = self.navigationController {
-            navigation.popViewControllerAnimated(true)
+    @IBAction func add() {
+        if let meal = getMealFromForm() {
+            if delegate == nil {
+                return
+            }
+            
+            delegate!.add(meal)
+            
+            if let navigation = self.navigationController {
+                navigation.popViewControllerAnimated(true)
+            }
         }
     }
 

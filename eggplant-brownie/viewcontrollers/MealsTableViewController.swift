@@ -45,18 +45,15 @@ class MealsTableViewController: UITableViewController, AddAMealDelegate {
             let row = indexPath!.row
             let meal = meals[ row ]
             
-            func removeSelected(action:UIAlertAction!) {
-                println("removed the selected one \(meal.name)")
-                meals.removeAtIndex(row)
-                tableView.reloadData()
-            }
-
             let details = UIAlertController(title: meal.name,
                 message: meal.details(),
                 preferredStyle: UIAlertControllerStyle.Alert)
             let remove = UIAlertAction(title: "Remove",
                 style: UIAlertActionStyle.Destructive,
-                handler: removeSelected)
+                handler: { () in
+                    self.meals.removeAtIndex(row)
+                    self.table.reloadData()
+            })
             details.addAction(remove)
             let cancel = UIAlertAction(title: "Cancel",
                 style: UIAlertActionStyle.Cancel,

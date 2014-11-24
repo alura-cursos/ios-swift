@@ -77,6 +77,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let newItem = NewItemViewController(delegate: self)
         if let navigation = navigationController {
             navigation.pushViewController(newItem, animated: true)
+        } else {
+            Alert(controller: self).show()
         }
     }
 

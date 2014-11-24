@@ -48,13 +48,22 @@ class MealsTableViewController: UITableViewController, AddAMealDelegate {
             let details = UIAlertController(title: meal.name,
                 message: meal.details(),
                 preferredStyle: UIAlertControllerStyle.Alert)
-            let ok = UIAlertAction(title: "Ok",
+            let remove = UIAlertAction(title: "Remove",
+                style: UIAlertActionStyle.Destructive,
+                handler: removeSelected)
+            details.addAction(remove)
+            let cancel = UIAlertAction(title: "Cancel",
                 style: UIAlertActionStyle.Cancel,
                 handler: nil)
-            details.addAction(ok)
+            details.addAction(cancel)
             presentViewController(details, animated: true, completion: nil)
         }
     }
+    
+    func removeSelected(action:UIAlertAction!) {
+        println("removed the selected one")
+    }
+
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "addMeal") {

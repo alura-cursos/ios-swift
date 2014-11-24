@@ -14,7 +14,7 @@ class Alert {
         self.controller = controller
     }
     
-    func show(message:String) {
+    func show(message:String = "Unexpected error.") {
         let details = UIAlertController(title: "Sorry",
             message: message,
             preferredStyle: UIAlertControllerStyle.Alert)

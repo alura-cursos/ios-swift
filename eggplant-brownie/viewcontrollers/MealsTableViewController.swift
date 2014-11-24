@@ -9,14 +9,30 @@ import UIKit
 
 class MealsTableViewController: UITableViewController, AddAMealDelegate {
 
-    var meals = [ Meal(name: "Eggplant brownie", happiness: 5),
-        Meal(name: "Zucchini Muffin", happiness: 3)]
+    var meals = Array<Meal>()
 
     func add(meal: Meal) {
         meals.append(meal)
+        let dir = getUserDir()
+        let archive =  "\(dir)/eggplant-brownie-meals"
+        NSKeyedArchiver.archiveRootObject(meals, toFile: archive)
         tableView.reloadData()
     }
-
+    func getUserDir() -> String {
+        let userDir = NSSearchPathForDirectoriesInDomains(
+            NSSearchPathDirectory.DocumentDirectory,
+            NSSearchPathDomainMask.UserDomainMask,
+            true)
+        return userDir[ 0 ] as String
+    }
+    override func viewDidLoad() {
+        let dir = getUserDir()
+        let archive =  "\(dir)/eggplant-brownie-meals"
+        if let loaded = NSKeyedUnarchiver.unarchiveObjectWithFile(archive) {
+            self.meals = loaded as Array
+        }
+    }
+    
     override func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
             return meals.count

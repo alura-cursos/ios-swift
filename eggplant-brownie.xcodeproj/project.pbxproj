@@ -18,6 +18,7 @@
 		798F28F21A184AE3009016B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798F28F01A184AE3009016B1 /* LaunchScreen.xib */; };
 		798F28FE1A184AE3009016B1 /* eggplant_brownieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798F28FD1A184AE3009016B1 /* eggplant_brownieTests.swift */; };
 		79A38FE11A237756009C82A9 /* RemoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A38FE01A237756009C82A9 /* RemoveViewController.swift */; };
+		79A38FE31A237DB7009C82A9 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A38FE21A237DB7009C82A9 /* Dao.swift */; };
 		79A85ADE1A1BBB6000F024DF /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79A85ADC1A1BBB6000F024DF /* NewItemViewController.xib */; };
 		79A85AE21A1BBD2F00F024DF /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A85AE11A1BBD2F00F024DF /* NewItemViewController.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		798F28FC1A184AE3009016B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		798F28FD1A184AE3009016B1 /* eggplant_brownieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eggplant_brownieTests.swift; sourceTree = "<group>"; };
 		79A38FE01A237756009C82A9 /* RemoveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveViewController.swift; sourceTree = "<group>"; };
+		79A38FE21A237DB7009C82A9 /* Dao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
 		79A85ADC1A1BBB6000F024DF /* NewItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewItemViewController.xib; sourceTree = "<group>"; };
 		79A85AE11A1BBD2F00F024DF /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 			children = (
 				7900BDF11A18E479006A7125 /* Meal.swift */,
 				7900BDF31A18E48B006A7125 /* Item.swift */,
+				79A38FE21A237DB7009C82A9 /* Dao.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				79A38FE11A237756009C82A9 /* RemoveViewController.swift in Sources */,
 				79A85AE21A1BBD2F00F024DF /* NewItemViewController.swift in Sources */,
 				7900BDF21A18E479006A7125 /* Meal.swift in Sources */,
+				79A38FE31A237DB7009C82A9 /* Dao.swift in Sources */,
 				7900BDF61A195A2B006A7125 /* ViewController.swift in Sources */,
 				798F28E81A184AE3009016B1 /* AppDelegate.swift in Sources */,
 				795BD2C81A1F3B9300CBADA0 /* Alert.swift in Sources */,

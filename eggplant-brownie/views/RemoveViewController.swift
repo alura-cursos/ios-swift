@@ -2,7 +2,6 @@
 //  RemoveViewController.swift
 //  eggplant-brownie
 //
-//  Created by Guilherme Silveira on 11/24/14.
 //  Copyright (c) 2014 alura. All rights reserved.
 //
 

@@ -19,9 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func addNew(item: Item) {
         items.append(item)
-        let dir = getUserDir()
-        let archive = "\(dir)/eggplant-brownie-items"
-        NSKeyedArchiver.archiveRootObject(items, toFile: archive)
+        Dao().saveItems(items)
         if let table = tableView {
             table.reloadData()
         } else {
@@ -76,12 +74,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             target: self,
             action: Selector("showNewItem"))
         navigationItem.rightBarButtonItem = newItemButton
-        let dir = getUserDir()
-        let archive = "\(dir)/eggplant-brownie-items"
-
-        if let loaded = NSKeyedUnarchiver.unarchiveObjectWithFile(archive) {
-            items = loaded as Array
-        }
+        items = Dao().loadItems()
     }
     
     @IBAction func showNewItem() {

@@ -47,6 +47,8 @@ class MealsTableViewController: UITableViewController, AddAMealDelegate {
             
             func removeSelected(action:UIAlertAction!) {
                 println("removed the selected one \(meal.name)")
+                meals.removeAtIndex(row)
+                tableView.reloadData()
             }
 
             let details = UIAlertController(title: meal.name,
